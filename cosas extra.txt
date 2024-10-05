@@ -1,0 +1,11 @@
+Para Tailwindcss que es una libreria de css rapida se debe instalar dentro de html con el codigo
+<script src="https://cdn.tailwindcss.com"></script>
+
+muy similar a bootstrap
+
+
+se crea la carpeta componentes para guardar snippets con clases espeficicas y solo mandarlas a llamar
+se coloca con <<x-nombredelcomponente></x-nombredelcomponente> y se manda el contenido con {{$slot}}
+<x-slot name="title"></x-slot>
+
+{{$variable ?? escritura si no existe}} operador para reconocer si existe o no
