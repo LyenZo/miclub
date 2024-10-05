@@ -7,25 +7,19 @@ use Illuminate\Http\Request;
 class CursosController extends Controller
 {
 
-    //la variable con un simbolo de "?" significa de que no necesariamente debe llenarse
+    //funcion compact('variable') hace el arreglo ['variable=>$variable']
+    //el arreglo ['variable=>$variable'] indica que se mandara la variable hacia la vista
 
-    
-    public function index($curso=null,$categoria=null){
-
-        if($curso && $categoria){
-            return "Este es un ejemplo de curso de nombre {$curso} con la categoria {$categoria}";
-        }
-    
+    //IMPORTANTE: solucionar como hacer el if de categorias
+    public function index($curso=null){
         if($curso){
-            return "Esta es un ejemplo de curso de nombre {$curso}";
+            return view('cursos.mostrar',compact('curso'));
         }
     
-        return "Esta va a ser la pagina donde se mostraran todos los cursos";
-
-        
+        return view('cursos.index'); 
     }
 
     public function crear(){
-        return "En esta pagina se mostrara el formulario para crear un curso";
+        return view('cursos.crear');
     }
 }
