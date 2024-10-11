@@ -16,3 +16,4 @@ Route::get('/inicio',InicioController::class);
 
 Route::get('/cursos/crear',[CursosController::class,'crear']);
 Route::get('/cursos/{curso?}/{categoria?}',[CursosController::class,'index']);
+route::get('/integrantes/lista',)

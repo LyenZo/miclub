@@ -9,3 +9,5 @@ se coloca con <<x-nombredelcomponente></x-nombredelcomponente> y se manda el con
 <x-slot name="title"></x-slot>
 
 {{$variable ?? escritura si no existe}} operador para reconocer si existe o no
+
+se agrego el paquete de bootstrap en npm install bootstrap 
