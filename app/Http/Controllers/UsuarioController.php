@@ -13,9 +13,19 @@ class UsuarioController extends Controller
     }
 
     public function create(){
-        return view('usuarios.index');
+        return view('usuarios.create');
     }
     public function show($usuario){
-        return view('usuarios.index');
+        $usuario=usuario::find($usuario);
+        return view('usuarios.show',compact('usuario'));
+    }
+
+    public function store(Request $request){
+        $usuario=new Usuario();
+        $usuario->name = $request->name;
+        $usuario->a_pat = $request->a_pat;
+        $usuario->a_mat = $usuario->a_mat;
+        $usuario->email = $usuario->email;
+        $usuario->password = $usuario->password;
     }
 }

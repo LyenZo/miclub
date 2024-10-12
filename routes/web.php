@@ -17,5 +17,6 @@ Route::get('/cursos/{curso?}/{categoria?}',[CursosController::class,'index']);
 route::get('/integrantes/lista',);
 
 Route::get('/usuarios',[UsuarioController::class,'index']);
-route::get('/usuarios/create',[UsuarioController::class,'create']);
-route::get('/usuarios/{usuario}',[UsuarioController::class,'show']);
+Route::get('/usuarios/create',[UsuarioController::class,'create']);
+Route::get('/usuarios/{usuario}',[UsuarioController::class,'show']);
+Route::post('/usuarios',[UsuarioController::class,'store']);
