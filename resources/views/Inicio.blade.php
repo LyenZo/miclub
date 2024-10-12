@@ -3,5 +3,5 @@
 @section('title','MiClub.mx | Inicio')
 
 @section('content')
-    <h1>Hola, este es mi primer contenido</h1>
+    <h1>Aquí se mostrará la página principal</h1>
 @endsection

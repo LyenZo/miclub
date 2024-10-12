@@ -11,3 +11,6 @@ se coloca con <<x-nombredelcomponente></x-nombredelcomponente> y se manda el con
 {{$variable ?? escritura si no existe}} operador para reconocer si existe o no
 
 se agrego el paquete de bootstrap en npm install bootstrap 
+
+
+FALTA ARREGLAR EL LOGIN

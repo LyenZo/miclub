@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\PrincipalController;
@@ -23,3 +24,9 @@ Route::post('/usuarios',[UsuarioController::class,'store']);
 Route::get('/usuarios/{usuario}/editar',[UsuarioController::class,'edit']);
 Route::put('/usuarios/{usuario}',[UsuarioController::class,'update']);
 Route::delete('/usuarios/{usuario}',[UsuarioController::class,'destroy']);
+
+Route::get('/login',[AuthController::class,'showlogin']);
+Route::post('/login',[AuthController::class,'login'])->name('login');
+Route::get('/home',function (){
+    return view ('home');
+});
