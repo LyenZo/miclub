@@ -20,3 +20,6 @@ Route::get('/usuarios',[UsuarioController::class,'index']);
 Route::get('/usuarios/create',[UsuarioController::class,'create']);
 Route::get('/usuarios/{usuario}',[UsuarioController::class,'show']);
 Route::post('/usuarios',[UsuarioController::class,'store']);
+Route::get('/usuarios/{usuario}/editar',[UsuarioController::class,'edit']);
+Route::put('/usuarios/{usuario}',[UsuarioController::class,'update']);
+Route::delete('/usuarios/{usuario}',[UsuarioController::class,'destroy']);

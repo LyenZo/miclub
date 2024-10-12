@@ -24,8 +24,34 @@ class UsuarioController extends Controller
         $usuario=new Usuario();
         $usuario->name = $request->name;
         $usuario->a_pat = $request->a_pat;
-        $usuario->a_mat = $usuario->a_mat;
-        $usuario->email = $usuario->email;
-        $usuario->password = $usuario->password;
+        $usuario->a_mat = $request->a_mat;
+        $usuario->email = $request->email;
+        $usuario->password = $request->password;
+
+        $usuario->save();
+        return redirect('/usuarios');
+    }
+    
+    public function edit($usuario){
+        $usuario=usuario::find($usuario);
+        return view('/usuarios/edit',compact('usuario'));
+    }
+
+    public function update(Request $request, $usuario){
+        $usuario=usuario::find($usuario);
+        $usuario->name = $request->name;
+        $usuario->a_pat = $request->a_pat;
+        $usuario->a_mat = $request->a_mat;
+        $usuario->email = $request->email;
+        $usuario->password = $request->password;
+
+        $usuario->save();
+        return redirect("/usuarios/{$usuario->id}");
+    }
+    
+    public function destroy($usuario){
+        $usuario=usuario::find($usuario);
+        $usuario->delete();
+        return redirect("/usuarios");
     }
 }
