@@ -31,7 +31,7 @@ class UsuarioController extends Controller
         $usuario->contrasena = $request->contrasena;
 
         $usuario->save();
-        Alert::success('usuario guardado','El producto se creo correctamente');
+        Alert::success('usuario guardado','El usuario se creo correctamente');
         return redirect('/usuario');
     }
     
@@ -50,7 +50,7 @@ class UsuarioController extends Controller
         $usuario->contrasena = $request->contrasena;
 
         $usuario->save();
-        Alert::success('usuario editado','Se editó la información del alumno');
+        Alert::success('usuario editado','Se editó la información del usuario');
         return redirect("/usuario/{$usuario->id}");
     }
     
